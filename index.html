@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Type in ID:
+    <input id="id-input"></input>
+
+    <div id="container"></div>
+
+    <script>
+
+        const cats = [
+
+            { id: 1, name: 'Jimmy' },
+            { id: 3, name: 'Sammy' },
+            { id: 4, name: 'Frankie' },
+            { id: 2, name: 'Dolly' },
+
+        ]
+
+        const container = document.getElementById('container')
+        const input = document.getElementById('id-input')
+
+        input.addEventListener('change', (e) => {
+        })
+
+        const renderAnimal = ({ name }) => {
+            container.textContent = "";
+            const pTag = document.createElement('p')
+            pTag.textContent = name;
+            container.append(pTag)
+        }
+
+        const renderNotFound = () => {
+            container.textContent = "";
+            const pTag = document.createElement('p')
+            pTag.textContent = 'Not Found'
+            container.append(pTag)
+        }
+
+    </script>
+</body>
+
+</html>
